@@ -1,0 +1,9 @@
+# To instal Apache in Front End PC 1 & 2
+---
+  - name: Install Apache2
+    hosts: frontendpcs
+    task: 
+      - name: Installing Apache Server
+        apt:
+          name: apache2
+          state: latest
