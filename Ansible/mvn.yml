@@ -1,0 +1,12 @@
+---
+  - hosts: frontendpcs
+    become: true
+    tasks:
+      - name: Install maven
+        apt: 
+          name=maven 
+          state=present 
+          update_cache=yes
+
+      - name: ensure apache started
+        service: name=maven state=started enabled=yes
