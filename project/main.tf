@@ -70,14 +70,14 @@ resource "aws_subnet" "database" {
     }
 }
 
-resource "aws_eip" "eip-nat" {
-  vpc = true
-
-  tags = {
-    Name = "EIP1"
-  }
-
-}
+#resource "aws_eip" "eip-nat" {
+#  vpc = true
+#
+#  tags = {
+#    Name = "EIP1"
+#  }
+#
+#}
 
 # resource "aws_nat_gateway" "main" {
 #   count                   = "${length(var.azs)}"
