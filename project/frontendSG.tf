@@ -25,6 +25,17 @@ resource "aws_security_group" "frontendsg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+# Allow all traffic
+
+  ingress {
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
+  }
+
 # Outbound Rules
   # Internet access to anywhere
   egress {
@@ -38,4 +49,5 @@ resource "aws_security_group" "frontendsg" {
     Name = "FrontEnd SG"
   }
 }
+
 

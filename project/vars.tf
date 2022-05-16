@@ -5,17 +5,18 @@ variable "region" {
 }
 
 variable "vpc_cidr" {
-  default = "10.30.0.0/16"
+  default = "192.168.0.0/16"
 }
 
 variable "subnet_cidr" {
   type = list
-  default = ["10.30.1.0/24","10.30.2.0/24","10.30.3.0/24","10.30.4.0/24","10.30.5.0/24","10.30.6.0/24"]
+  default = ["192.168.1.0/24","192.168.2.0/24","192.168.3.0/24","192.168.4.0/24","192.168.5.0/24","192.168.6.0/24"]
 }
 
 variable "azs" {
   type = list
-  default = ["ap-south-1a","ap-south-1b"]
+#  default = ["ap-south-1a","ap-south-1b"]
+  default = ["ap-south-1a"]
 }
 
 # variable "instance_type" {
@@ -33,4 +34,5 @@ variable "azs" {
 # variable "subnet_cidr" {
 #   type = string
 # }
+
 
